@@ -19,7 +19,7 @@ Object {
   "_class": Array [
     "UserGroup",
   ],
-  "_key": "66a74a7fdb1710109d87a9954b961914",
+  "_key": "service_now_group:66a74a7fdb1710109d87a9954b961914:j1-subgroup@jupiterone.com",
   "_rawData": Array [
     Object {
       "name": "default",
@@ -66,8 +66,8 @@ exports[`createGroupEntity 2`] = `
 Object {
   "_class": "HAS",
   "_fromEntityKey": "43f6027fdb1710109d87a9954b961939",
-  "_key": "43f6027fdb1710109d87a9954b961939|has|66a74a7fdb1710109d87a9954b961914",
-  "_toEntityKey": "66a74a7fdb1710109d87a9954b961914",
+  "_key": "43f6027fdb1710109d87a9954b961939|has|service_now_group:66a74a7fdb1710109d87a9954b961914:j1-subgroup@jupiterone.com",
+  "_toEntityKey": "service_now_group:66a74a7fdb1710109d87a9954b961914:j1-subgroup@jupiterone.com",
   "_type": "service_now_group_has_group",
   "displayName": "HAS",
 }
@@ -92,7 +92,7 @@ Object {
   "_class": Array [
     "User",
   ],
-  "_key": "5ccbba87db1310109d87a9954b9619db",
+  "_key": "service_now_user:5ccbba87db1310109d87a9954b9619db:j1-administrator",
   "_rawData": Array [
     Object {
       "name": "default",
@@ -191,7 +191,7 @@ Object {
   "_class": Array [
     "Incident",
   ],
-  "_key": "1c741bd70b2322007518478d83673af3",
+  "_key": "service_now_incident:1c741bd70b2322007518478d83673af3:INC0000060",
   "_rawData": Array [
     Object {
       "name": "default",

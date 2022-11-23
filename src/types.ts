@@ -12,7 +12,7 @@ export interface IntegrationConfig extends IntegrationInstanceConfig {
   /**
    * Username for basic auth
    */
-  username: string;
+  userid: string;
   /**
    * Password for basic auth
    */

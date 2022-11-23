@@ -31,7 +31,7 @@ test('Should throw if invalid hostname', async () => {
   const executionContext = createMockExecutionContext<IntegrationConfig>({
     instanceConfig: {
       hostname: 'invalid.service-now.com',
-      username: 'invalid',
+      userid: 'invalid',
       password: 'invalid',
     },
   });
@@ -68,8 +68,8 @@ describe('recordings', () => {
 
     const executionContext = createMockExecutionContext<IntegrationConfig>({
       instanceConfig: {
-        hostname: process.env.HOSTNAME || 'dev128112.service-now.com',
-        username: process.env.USERNAME || 'valid_username',
+        hostname: process.env.HOSTNAME || 'dev000000.service-now.com',
+        userid: process.env.USERID || 'valid_username',
         password: process.env.PASSWORD || 'valid_password',
       },
     });
@@ -97,8 +97,8 @@ describe('recordings', () => {
 
     const executionContext = createMockExecutionContext<IntegrationConfig>({
       instanceConfig: {
-        hostname: process.env.HOSTNAME || 'dev94579.service-now.com',
-        username: process.env.USERNAME || 'valid_username',
+        hostname: process.env.HOSTNAME || 'dev000000.service-now.com',
+        userid: process.env.USERID || 'valid_username',
         password: process.env.PASSWORD || 'valid_password',
       },
     });

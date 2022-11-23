@@ -2,7 +2,7 @@
   "extends": "./node_modules/@jupiterone/integration-sdk-dev-tools/config/typescript",
   "compilerOptions": {
     "outDir": "dist",
-    "skipLibCheck": true,
+    "skipLibCheck": true
   },
   "paths": {
     "~/*": ["./*"]

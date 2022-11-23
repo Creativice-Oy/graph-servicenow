@@ -4,7 +4,7 @@ const instanceConfigFields: IntegrationInstanceConfigFieldMap = {
   hostname: {
     type: 'string',
   },
-  username: {
+  userid: {
     type: 'string',
   },
   password: {

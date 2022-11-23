@@ -34,6 +34,6 @@ variables:
 
 ```bash
 HOSTNAME=dev00000.service-now.com
-USERNAME=your-username
+USERID=your-username
 PASSWORD=your-password
 ```

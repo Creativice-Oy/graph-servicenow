@@ -36,7 +36,7 @@ export class ServiceNowClient {
 
   constructor(readonly config: IntegrationConfig, logger: IntegrationLogger) {
     this.hostname = config.hostname;
-    this.username = config.username;
+    this.username = config.userid;
     this.password = config.password;
 
     this.logger = logger;

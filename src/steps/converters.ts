@@ -7,6 +7,18 @@ import {
 } from '@jupiterone/integration-sdk-core';
 import { Entities } from '../constants';
 
+export function getUserKey(id: string, name: string): string {
+  return `service_now_user:${id}:${name}`;
+}
+
+export function getGroupKey(id: string, name: string): string {
+  return `service_now_group:${id}:${name}`;
+}
+
+export function getIncidentKey(id: string, name: string): string {
+  return `service_now_incident:${id}:${name}`;
+}
+
 function convertCommonServiceNowProperties(
   serviceNowObject: any,
 ): Record<string, string | boolean | number | null | undefined> {
@@ -41,7 +53,7 @@ export function createUserEntity(user: any): Entity {
         ...convertCommonServiceNowProperties(user),
         _class: Entities.USER._class,
         _type: Entities.USER._type,
-        _key: user.sys_id,
+        _key: getUserKey(user.sys_id, user.user_name),
         username: user.user_name,
         active: user.active === 'true',
         email: user.email ? user.email : undefined,
@@ -58,7 +70,7 @@ export function createGroupEntity(group: any): Entity {
         ...convertCommonServiceNowProperties(group),
         _class: Entities.GROUP._class,
         _type: Entities.GROUP._type,
-        _key: group.sys_id,
+        _key: getGroupKey(group.sys_id, group.email),
         active: group.active === 'true',
         email: group.email ? group.email : undefined,
       },
@@ -74,7 +86,7 @@ export function createIncidentEntity(incident: any): Entity {
         ...convertCommonServiceNowProperties(incident),
         _class: Entities.INCIDENT._class,
         _type: Entities.INCIDENT._type,
-        _key: incident.sys_id,
+        _key: getIncidentKey(incident.sys_id, incident.number),
         name: incident.number,
         displayName: incident.number,
         severity: incident.severity,

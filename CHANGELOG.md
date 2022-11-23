@@ -8,6 +8,16 @@ and this project adheres to
 
 ## [Unreleased]
 
+### Added
+
+- Made `user`, `group` and `incident` keys more detailed by including the
+  `name`/`email` property.
+
+### Updated
+
+- Updated SDK dependencies to 8.29.2.
+- Changed ENV `USERNAME` property name to `USERID`.
+
 ## v0.3.0 - 2022-07-12
 
 ### Updated

@@ -19,15 +19,13 @@ const client = new ServiceNowClient(
 
 const filename = path.join(__dirname, '__data__', 'tables.txt');
 
-console.log('Fetching table names from Service Now...');
 client
   .listTableNames('')
   .then((tableNames) =>
     fs.writeFile(filename, tableNames.sort().join('\n'), (err) => {
       if (err) throw err;
-      console.log(`Successfully wrote ServiceNow table names to ${filename}`);
     }),
   )
-  .catch((err) => {
+  .catch(() => {
     throw Error('Error executing listRemoteTables.');
   });
